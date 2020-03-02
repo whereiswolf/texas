@@ -5,5 +5,11 @@
   "endOfLine": "lf",
   "tabWidth": 2,
   "useTabs": false,
-  "semi": false
+  "semi": false,
+  "overrides": [
+    {
+      "files": ["*.json"],
+      "options": { "parser": "json", "printWidth": 60  }
+    }
+  ]
 }
