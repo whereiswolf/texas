@@ -5,16 +5,28 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Debug Development API",
       "type": "node",
       "request": "launch",
-      "name": "Debug API",
+      "cwd": "${workspaceRoot}",
       "args": ["${workspaceRoot}/src/server.ts"],
       "runtimeArgs": ["-r", "ts-node/register"],
-      "cwd": "${workspaceRoot}",
-      "protocol": "inspector",
-      "internalConsoleOptions": "openOnSessionStart",
+      "console": "integratedTerminal",
       "env": {
+        "NODE_ENV": "development",
         "NODE_PATH": "src/"
+      }
+    },
+    {
+      "name": "Debug Production API",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/dist/server.js",
+      "preLaunchTask": "build",
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "production"
       }
     }
   ]
