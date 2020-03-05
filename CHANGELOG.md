@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3-beta.0](https://github.com/whereiswolf/express-ts/compare/v0.0.2...v0.0.3-beta.0) (2020-03-05)
+
+
+### Features
+
+* add tests and debugger setup. add status monitoring ([cd84f3c](https://github.com/whereiswolf/express-ts/commit/cd84f3c1f73318066c7766947398b5a8d1229be1))
+* add tests and debugger setup. add status monitoring ([2ec9fe8](https://github.com/whereiswolf/express-ts/commit/2ec9fe83d9b3ba02d097431006580fe72ac382a6))
+
 ### 0.0.2 (2020-03-02)
 
 
