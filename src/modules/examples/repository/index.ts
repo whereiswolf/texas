@@ -1,5 +1,5 @@
 import { Example } from 'models'
 
-export const find = (): Example[] => [{ id: 1, text: 'Example' }]
+export const find = (): Example[] => [{ id: 1, text: 'test' }]
 
-export const create = (example: Example): Example => example
+export const create = ({ text }: { text: string }): Example => ({ id: 1, text })

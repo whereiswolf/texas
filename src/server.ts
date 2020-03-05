@@ -2,11 +2,13 @@ import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import swaggerUi from 'swagger-ui-express'
+import statusMonitor from 'express-status-monitor'
 import morgan from 'morgan'
 import config, { swagger } from 'config'
 import api from 'modules'
 
 const app = express()
+const status = statusMonitor()
 const logger = (() => {
   if (config.ENV === 'development') return morgan('dev')
   if (config.ENV === 'production') return morgan('combined')
@@ -18,6 +20,7 @@ app
   .use(bodyParser.urlencoded({ extended: false }))
   .use(bodyParser.json({ limit: '1mb' }))
   .use(logger)
+  .use(status)
   .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swagger))
   .use('/api', api)
 
