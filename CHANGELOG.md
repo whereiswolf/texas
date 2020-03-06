@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3-beta.1](https://github.com/whereiswolf/express-ts/compare/v0.0.3-beta.0...v0.0.3-beta.1) (2020-03-06)
+
+
+### Features
+
+* add docker config ([fee74ce](https://github.com/whereiswolf/express-ts/commit/fee74ce617d8be1321fdaf47f266f1e495ceb168))
+* add docker config ([b451174](https://github.com/whereiswolf/express-ts/commit/b4511744bb05c76036763b72f1d1cc3890b11b6a))
+
 ### [0.0.3-beta.0](https://github.com/whereiswolf/express-ts/compare/v0.0.2...v0.0.3-beta.0) (2020-03-05)
 
 
