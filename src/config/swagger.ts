@@ -10,7 +10,7 @@ const config: SwaggerOptions = {
       description: process.env.npm_package_description,
     },
   },
-  apis: ['./src/modules/**/*.ts'],
+  apis: ['./src/**/*.ts'],
   basePath: '/',
   jsonEditor: true,
 }
