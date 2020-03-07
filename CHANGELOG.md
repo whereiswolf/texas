@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3-beta.2](https://github.com/whereiswolf/texas/compare/v0.0.3-beta.1...v0.0.3-beta.2) (2020-03-07)
+
 ### [0.0.3-beta.1](https://github.com/whereiswolf/express-ts/compare/v0.0.3-beta.0...v0.0.3-beta.1) (2020-03-06)
 
 
