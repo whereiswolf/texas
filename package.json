@@ -1,6 +1,6 @@
 {
   "name": "texas",
-  "description": "TypeScript, Express app scaffolding",
+  "description": "TypeScript, Express App Scaffolding",
   "version": "0.0.3",
   "main": "dist/server.js",
   "author": "Michał Wilk <wilk.michal@outlook.com>",
@@ -22,7 +22,8 @@
     "clean": "rimraf ./dist/*",
     "clean:git": "rimraf .git",
     "release": "standard-version && git push --follow-tags origin master",
-    "release:beta": "standard-version --prerelease beta && git push --follow-tags origin develop"
+    "release:beta": "standard-version --prerelease beta && git push --follow-tags origin develop",
+    "new:module": "hygen module new"
   },
   "husky": {
     "hooks": {
@@ -36,11 +37,9 @@
     ]
   },
   "dependencies": {
-    "@types/express-status-monitor": "^1.2.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "eslint-plugin-prettier": "^3.1.2",
     "express": "^4.17.1",
     "express-status-monitor": "^1.2.9",
     "helmet": "^3.21.3",
