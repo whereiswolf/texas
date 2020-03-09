@@ -25,6 +25,7 @@ describe('examples module controllers', () => {
   beforeEach(() => {
     response = new Response()
     next = jest.fn()
+    mocked(next).mockClear()
     mocked(find).mockClear()
     mocked(findById).mockClear()
     mocked(create).mockClear()

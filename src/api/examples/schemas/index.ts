@@ -6,13 +6,15 @@ import { object, string } from 'joi'
  *   schemas:
  *     CreateExampleSchema:
  *       type: object
+ *       required:
+ *         - text
  *       properties:
  *         text:
  *           type: string
  *           required: true
  */
-export const CreateExampleSchema = object().keys({
-  text: string(),
+export const CreateExampleSchema = object({
+  text: string().required(),
 })
 
 /**
@@ -27,7 +29,7 @@ export const CreateExampleSchema = object().keys({
  *         text:
  *           type: string
  */
-export const UpdateExampleSchema = object().keys({
+export const UpdateExampleSchema = object({
   text: string().required(),
 })
 
@@ -41,6 +43,6 @@ export const UpdateExampleSchema = object().keys({
  *         text:
  *           type: string
  */
-export const PatchExampleSchema = object().keys({
+export const PatchExampleSchema = object({
   text: string(),
 })

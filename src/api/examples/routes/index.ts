@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { schemaValidator } from 'middlewares'
+import { validator } from 'middlewares'
 import {
   CreateExampleSchema,
   UpdateExampleSchema,
@@ -77,7 +77,7 @@ router.get('/:id', getExample)
  *            schema:
  *              $ref: '#/components/schemas/Example'
  */
-router.post('/', schemaValidator(CreateExampleSchema), createExample)
+router.post('/', validator.body(CreateExampleSchema), createExample)
 
 /**
  * @swagger
@@ -105,7 +105,12 @@ router.post('/', schemaValidator(CreateExampleSchema), createExample)
  *            schema:
  *              $ref: '#/components/schemas/Example'
  */
-router.put('/:id', schemaValidator(UpdateExampleSchema), updateExample)
+router.put(
+  '/:id',
+  validator.id,
+  validator.body(UpdateExampleSchema),
+  updateExample
+)
 
 /**
  * @swagger
@@ -133,7 +138,12 @@ router.put('/:id', schemaValidator(UpdateExampleSchema), updateExample)
  *            schema:
  *              $ref: '#/components/schemas/Example'
  */
-router.patch('/:id', schemaValidator(PatchExampleSchema), updateExample)
+router.patch(
+  '/:id',
+  validator.id,
+  validator.body(PatchExampleSchema),
+  updateExample
+)
 
 /**
  * @swagger
@@ -156,6 +166,6 @@ router.patch('/:id', schemaValidator(PatchExampleSchema), updateExample)
  *            schema:
  *              type: boolean
  */
-router.delete('/:id', deleteExample)
+router.delete('/:id', validator.id, deleteExample)
 
 export default router

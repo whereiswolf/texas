@@ -1,1 +1,1 @@
-export { default as schemaValidator } from './schemaValidator'
+export { default as validator } from './validator'
