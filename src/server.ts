@@ -30,3 +30,5 @@ app.listen(config.PORT, config.HOST, () => {
     `Server (${config.NODE_ENV}) started at http://${config.HOST}:${config.PORT}`
   )
 })
+
+export default app
