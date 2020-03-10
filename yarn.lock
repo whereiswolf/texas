@@ -3707,10 +3707,10 @@ jest-environment-node@^25.1.0:
     jest-mock "^25.1.0"
     jest-util "^25.1.0"
 
-jest-express@1.11.1:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/jest-express/-/jest-express-1.11.1.tgz#1ba2e9431dd5e03d3c67a9b1b65c0349bbea4137"
-  integrity sha512-jE8SSzM9C3+SvGr0jOf1gPylimu59cjJ7V3JfyfQk8tzajhNhU2NL+DNmHa27he1HZ8Yqs9c+eOpkgnmVGdB2w==
+jest-express@1.11.3:
+  version "1.11.3"
+  resolved "https://registry.yarnpkg.com/jest-express/-/jest-express-1.11.3.tgz#7a6d0033c4ab60bb544210b04ef992d9edb733fd"
+  integrity sha512-+zDimqXGXvoilhyrJUXCLYxKMAUPLnDhRyt4HaL4BybMaZxHKNpNBYfiQ9CPtLG7cPD/sxSv1saNJ51YVFqsUA==
   dependencies:
     jest-node-http "1.0.0"
 
