@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/whereiswolf/texas/compare/v0.0.3-beta.3...v0.0.3) (2020-03-10)
+
+
+### Features
+
+* add debugger, tests, docker and renovate bot ([6da2daa](https://github.com/whereiswolf/texas/commit/6da2daac3693a08cbbf10647c809c10a53931880))
+
 ### [0.0.3-beta.3](https://github.com/whereiswolf/texas/compare/v0.0.3-beta.2...v0.0.3-beta.3) (2020-03-10)
 
 ### [0.0.3-beta.2](https://github.com/whereiswolf/texas/compare/v0.0.3-beta.1...v0.0.3-beta.2) (2020-03-07)
