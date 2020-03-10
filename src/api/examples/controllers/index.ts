@@ -65,7 +65,7 @@ export const updateExample = async (
 
 export const deleteExample = async (
   request: Request<{ id: string }>,
-  response: Response<boolean>,
+  response: Response,
   next: NextFunction
 ) => {
   try {

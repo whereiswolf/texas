@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { validate, Schema, object, string } from 'joi'
+import { validate, object, string, Schema } from 'joi'
 
 type ValidationLocation = 'body' | 'params'
 
