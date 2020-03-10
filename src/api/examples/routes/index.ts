@@ -1,7 +1,7 @@
 import { Router } from 'express'
-import { schemaValidator } from 'middleware'
-import { CreateExampleSchema } from './schemas'
-import { getExamples, createExample } from './controllers'
+import { schemaValidator } from 'middlewares'
+import { CreateExampleSchema } from '../schemas'
+import { getExamples, createExample } from '../controllers'
 
 const router = Router()
 
@@ -60,7 +60,6 @@ router.get('/', getExamples)
  *   CreateExampleSchema:
  *     type: object
  *     required:
- *       - id
  *       - text
  *     properties:
  *       text:

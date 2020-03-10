@@ -5,8 +5,9 @@ dotenv.config()
 type Env = 'development' | 'production' | 'testing'
 
 export default {
-  ENV: (process.env.ENV || 'development') as Env,
-  PORT: (process.env.PORT || 3000) as number,
+  NODE_ENV: (process.env.NODE_ENV || 'development') as Env,
+  PORT: (process.env.PORT || 8000) as number,
+  HOST: process.env.HOST || '0.0.0.0',
   DATABASE_URL: process.env.DATABASE_URL,
 }
 

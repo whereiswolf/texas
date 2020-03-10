@@ -3,5 +3,8 @@
   "ignore": [".git", "node_modules/**/node_modules"],
   "exec": "ts-node",
   "watch": ["src"],
-  "ext": "json,ts"
+  "ext": "json,ts",
+  "env": {
+    "NODE_PATH": "src/"
+  }
 }
