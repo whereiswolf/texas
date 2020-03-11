@@ -1,10 +1,16 @@
-import { object, string } from 'joi'
+---
+to: src/api/<%= name %>/schemas/index.ts
+---
+<%
+  singularName = h.inflection.singularize(name)
+  singularPascalName = h.changeCase.pascal(singularName)
+%>import { object, string } from 'joi'
 
 /**
  * @swagger
  * components:
  *   schemas:
- *     CreateExampleSchema:
+ *     Create<%= singularPascalName %>Schema:
  *       type: object
  *       required:
  *         - text
@@ -13,7 +19,7 @@ import { object, string } from 'joi'
  *           type: string
  *           required: true
  */
-export const CreateExampleSchema = object({
+export const Create<%= singularPascalName %>Schema = object({
   text: string().required(),
 })
 
@@ -21,7 +27,7 @@ export const CreateExampleSchema = object({
  * @swagger
  * components:
  *   schemas:
- *     UpdateExampleSchema:
+ *     Update<%= singularPascalName %>Schema:
  *       type: object
  *       required:
  *         - text
@@ -29,7 +35,7 @@ export const CreateExampleSchema = object({
  *         text:
  *           type: string
  */
-export const UpdateExampleSchema = object({
+export const Update<%= singularPascalName %>Schema = object({
   text: string().required(),
 })
 
@@ -37,12 +43,12 @@ export const UpdateExampleSchema = object({
  * @swagger
  * components:
  *   schemas:
- *     PatchExampleSchema:
+ *     Patch<%= singularPascalName %>Schema:
  *       type: object
  *       properties:
  *         text:
  *           type: string
  */
-export const PatchExampleSchema = object({
+export const Patch<%= singularPascalName %>Schema = object({
   text: string(),
 })

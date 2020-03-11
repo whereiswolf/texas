@@ -1,13 +1,22 @@
-import { Request } from 'express'
+---
+to: src/api/<%= name %>/controllers/index.spec.ts
+---
+<%
+  singularName = h.inflection.singularize(name)
+  singularCamelName = h.changeCase.camel(singularName)
+  singularPascalName = h.changeCase.pascal(singularName)
+  pluralCamelName = h.changeCase.camel(name)
+  pluralPascalName = h.changeCase.pascal(name)
+%>import { Request } from 'express'
 import { Response } from 'jest-express/lib/response'
 import { mocked } from 'ts-jest/utils'
 import { find, create, findById, update, remove } from '../repository'
 import {
-  getExamples,
-  createExample,
-  getExample,
-  updateExample,
-  deleteExample,
+  get<%= pluralPascalName %>,
+  create<%= singularPascalName %>,
+  get<%= singularPascalName %>,
+  update<%= singularPascalName %>,
+  delete<%= singularPascalName %>,
 } from '.'
 
 jest.mock('../repository', () => ({
@@ -18,7 +27,7 @@ jest.mock('../repository', () => ({
   remove: jest.fn(),
 }))
 
-describe('examples module controllers', () => {
+describe('<%= pluralCamelName %> module controllers', () => {
   let response: any
   let next: jest.Mock
 
@@ -33,12 +42,12 @@ describe('examples module controllers', () => {
     mocked(remove).mockClear()
   })
 
-  describe('getExamples function', () => {
-    it('return a list of Examples in the repository', async () => {
+  describe('get<%= pluralPascalName %> function', () => {
+    it('return a list of <%= pluralPascalName %> in the repository', async () => {
       const request = {} as Request
 
       mocked(find).mockReturnValue([{ id: 'id-123', text: 'test' }])
-      await getExamples(request, response, next)
+      await get<%= pluralPascalName %>(request, response, next)
 
       expect(response.status).toBeCalledWith(200)
       expect(response.json).toBeCalledWith([{ id: 'id-123', text: 'test :)' }])
@@ -50,18 +59,18 @@ describe('examples module controllers', () => {
       mocked(find).mockImplementationOnce(() => {
         throw new Error('test')
       })
-      await getExamples(request, response, next)
+      await get<%= pluralPascalName %>(request, response, next)
 
       expect(next).toBeCalledWith(new Error('test'))
     })
   })
 
-  describe('getExample function', () => {
-    it('return Example object from the repository', async () => {
+  describe('get<%= singularPascalName %> function', () => {
+    it('return <%= singularPascalName %> object from the repository', async () => {
       const request = { params: { id: 'id-123' } } as Request<{ id: string }>
 
       mocked(findById).mockReturnValue({ id: 'id-123', text: 'test' })
-      await getExample(request, response, next)
+      await get<%= singularPascalName %>(request, response, next)
 
       expect(response.status).toBeCalledWith(200)
       expect(response.json).toBeCalledWith({ id: 'id-123', text: 'test :)' })
@@ -73,18 +82,18 @@ describe('examples module controllers', () => {
       mocked(findById).mockImplementationOnce(() => {
         throw new Error('test')
       })
-      await getExample(request, response, next)
+      await get<%= singularPascalName %>(request, response, next)
 
       expect(next).toBeCalledWith(new Error('test'))
     })
   })
 
-  describe('createExample function', () => {
-    it('creates and returns a newly created Example', async () => {
+  describe('create<%= singularPascalName %> function', () => {
+    it('creates and returns a newly created <%= singularPascalName %>', async () => {
       const request = { body: { text: 'test' } } as Request
 
       mocked(create).mockReturnValue({ id: 'id-123', text: 'test' })
-      await createExample(request, response, next)
+      await create<%= singularPascalName %>(request, response, next)
 
       expect(create).toBeCalledWith({ text: 'test' })
       expect(response.status).toBeCalledWith(200)
@@ -100,21 +109,21 @@ describe('examples module controllers', () => {
       mocked(create).mockImplementationOnce(() => {
         throw new Error('test')
       })
-      await createExample(request, response, next)
+      await create<%= singularPascalName %>(request, response, next)
 
       expect(next).toBeCalledWith(new Error('test'))
     })
   })
 
-  describe('updateExample function', () => {
-    it('updates an existing Example object', async () => {
+  describe('update<%= singularPascalName %> function', () => {
+    it('updates an existing <%= singularPascalName %> object', async () => {
       const request = {
         params: { id: 'id-123' },
         body: { text: 'test 1' },
       } as Request<{ id: string }>
 
       mocked(update).mockReturnValue({ id: 'id-123', text: 'test 1' })
-      await updateExample(request, response, next)
+      await update<%= singularPascalName %>(request, response, next)
 
       expect(update).toBeCalledWith('id-123', { text: 'test 1' })
       expect(response.status).toBeCalledWith(200)
@@ -130,18 +139,18 @@ describe('examples module controllers', () => {
       mocked(update).mockImplementationOnce(() => {
         throw new Error('test')
       })
-      await updateExample(request, response, next)
+      await update<%= singularPascalName %>(request, response, next)
 
       expect(next).toBeCalledWith(new Error('test'))
     })
   })
 
-  describe('deleteExample function', () => {
-    it('deletes a specified Example object', async () => {
+  describe('delete<%= singularPascalName %> function', () => {
+    it('deletes a specified <%= singularPascalName %> object', async () => {
       const request = { params: { id: 'id-123' } } as Request<{ id: string }>
 
       mocked(remove).mockReturnValue('id-123')
-      await deleteExample(request, response, next)
+      await delete<%= singularPascalName %>(request, response, next)
 
       expect(remove).toBeCalledWith('id-123')
       expect(response.status).toBeCalledWith(204)
@@ -154,7 +163,7 @@ describe('examples module controllers', () => {
       mocked(remove).mockImplementationOnce(() => {
         throw new Error('test')
       })
-      await deleteExample(request, response, next)
+      await delete<%= singularPascalName %>(request, response, next)
 
       expect(next).toBeCalledWith(new Error('test'))
     })
