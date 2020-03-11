@@ -1,7 +1,7 @@
 {
   "name": "texas",
-  "description": "TypeScript, Express app scaffolding",
-  "version": "0.0.3",
+  "description": "TypeScript, Express App Scaffolding",
+  "version": "0.0.4-beta.1",
   "main": "dist/server.js",
   "author": "Michał Wilk <wilk.michal@outlook.com>",
   "repository": {
@@ -21,8 +21,9 @@
     "docker": "docker-compose -f .docker/docker-compose.yml up --build ",
     "clean": "rimraf ./dist/*",
     "clean:git": "rimraf .git",
-    "release": "standard-version && git push --follow-tags origin master",
-    "release:beta": "standard-version --prerelease beta && git push --follow-tags origin develop"
+    "release": "standard-version",
+    "release:beta": "standard-version --prerelease beta",
+    "new:module": "hygen module new"
   },
   "husky": {
     "hooks": {
@@ -36,11 +37,9 @@
     ]
   },
   "dependencies": {
-    "@types/express-status-monitor": "^1.2.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "eslint-plugin-prettier": "^3.1.2",
     "express": "^4.17.1",
     "express-status-monitor": "^1.2.9",
     "helmet": "^3.21.3",
@@ -59,15 +58,15 @@
     "@types/node": "13.9.0",
     "@types/swagger-jsdoc": "3.0.2",
     "@types/swagger-ui-express": "4.1.1",
-    "@typescript-eslint/eslint-plugin": "2.22.0",
-    "@typescript-eslint/parser": "2.22.0",
+    "@typescript-eslint/eslint-plugin": "2.23.0",
+    "@typescript-eslint/parser": "2.23.0",
     "@zerollup/ts-transform-paths": "1.7.12",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.0",
     "husky": "4.2.3",
     "hygen": "5.0.3",
     "jest": "25.1.0",
-    "jest-express": "1.11.1",
+    "jest-express": "1.11.3",
     "lint-staged": "10.0.8",
     "mock-express-response": "0.2.2",
     "nodemon": "2.0.2",

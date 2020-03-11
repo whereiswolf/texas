@@ -1,16 +1,32 @@
 import { Request, Response, NextFunction } from 'express'
-import { find, create } from '../repository'
+import { find, create, findById, update, remove } from '../repository'
 import { addSmile, mapSmiles } from '../services'
+import { Example } from 'models'
 
 export const getExamples = async (
   _: Request,
-  response: Response,
+  response: Response<Example[]>,
   next: NextFunction
 ) => {
   try {
     const examples = await find()
-    const examplesWithSmile = mapSmiles(examples)
-    return response.status(200).json(examplesWithSmile)
+    const examplesWithSmiles = mapSmiles(examples)
+    return response.status(200).json(examplesWithSmiles)
+  } catch (err) {
+    return next(err)
+  }
+}
+
+export const getExample = async (
+  request: Request<{ id: string }>,
+  response: Response<Example>,
+  next: NextFunction
+) => {
+  try {
+    const { id } = request.params
+    const example = await findById(id)
+    const exampleWithSmile = addSmile(example)
+    return response.status(200).json(exampleWithSmile)
   } catch (err) {
     return next(err)
   }
@@ -18,14 +34,44 @@ export const getExamples = async (
 
 export const createExample = async (
   request: Request,
-  response: Response,
+  response: Response<Example>,
   next: NextFunction
 ) => {
   try {
     const { body } = request
-    await create(body)
-    const exampleWithSmile = addSmile(body)
-    return response.status(200).json(exampleWithSmile)
+    const example = await create(body)
+    return response.status(200).json(example)
+  } catch (err) {
+    return next(err)
+  }
+}
+
+export const updateExample = async (
+  request: Request<{ id: string }>,
+  response: Response<Example>,
+  next: NextFunction
+) => {
+  try {
+    const {
+      params: { id },
+      body,
+    } = request
+    const example = await update(id, body)
+    return response.status(200).json(example)
+  } catch (err) {
+    return next(err)
+  }
+}
+
+export const deleteExample = async (
+  request: Request<{ id: string }>,
+  response: Response,
+  next: NextFunction
+) => {
+  try {
+    const { id } = request.params
+    await remove(id)
+    return response.status(204).json()
   } catch (err) {
     return next(err)
   }
