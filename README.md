@@ -11,8 +11,7 @@ Texas is yet another boilerplate for creating [Express](https://expressjs.com/) 
 - 📗 **API Documentation**: Out of the box the app automagically generates the Swagger UI based on JSDocs! [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express) and [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) are already configured.
 - 🐛 **Debugging and testing**: The repo contains setup for [VS Code](https://code.visualstudio.com/)'s Debugger as well as for [Jest](https://jestjs.io/) tests.
 - 🐳 **Dockerization**: There are already [Dockerfile](https://docs.docker.com/engine/reference/builder/) and a [docker-compose](https://docs.docker.com/compose/) files ready to run the app in a container. Though you might want to consider extending the config with a database container.
-> *Work in progress...*
->- 🖨️ **Generating project structure**: You can use [Hygen](https://www.hygen.io/) scripts and templates to create new modules, controllers or adjust them to fit your own project structure.
+- 🖨️ **Generating project structure**: You can use [Hygen](https://www.hygen.io/) scripts and templates to create new modules, controllers or adjust them to fit your own project structure.
 
 
 ## What's not included
