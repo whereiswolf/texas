@@ -63,7 +63,7 @@ router.get('/:id', getExample)
  *   post:
  *    tags:
  *     - Examples
- *    description: Returns example object
+ *    description: Creates example object
  *    requestBody:
  *      content:
  *        application/json:

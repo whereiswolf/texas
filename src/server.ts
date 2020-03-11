@@ -15,15 +15,14 @@ const logger = (() => {
   return []
 })()
 
-app
-  .use(cors())
-  .use(bodyParser.urlencoded({ extended: false }))
-  .use(bodyParser.json({ limit: '1mb' }))
-  .use(helmet())
-  .use(status())
-  .use(logger)
-  .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swagger))
-  .use('/api', api)
+app.use(cors())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json({ limit: '1mb' }))
+app.use(helmet())
+app.use(status())
+app.use(logger)
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swagger))
+app.use('/api', api)
 
 app.listen(config.PORT, config.HOST, () => {
   console.log(
