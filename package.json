@@ -21,8 +21,8 @@
     "docker": "docker-compose -f .docker/docker-compose.yml up --build ",
     "clean": "rimraf ./dist/*",
     "clean:git": "rimraf .git",
-    "release": "standard-version && git push --follow-tags origin master",
-    "release:beta": "standard-version --prerelease beta && git push --follow-tags origin develop",
+    "release": "standard-version",
+    "release:beta": "standard-version --prerelease beta",
     "new:module": "hygen module new"
   },
   "husky": {
