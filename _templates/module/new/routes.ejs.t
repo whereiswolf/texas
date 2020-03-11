@@ -5,6 +5,7 @@ to: src/api/<%= name %>/routes/index.ts
   singularName = h.inflection.singularize(name)
   singularCamelName = h.changeCase.camel(singularName)
   singularPascalName = h.changeCase.pascal(singularName)
+  pluralKebabName = h.changeCase.kebab(name)
   pluralCamelName = h.changeCase.camel(name)
   pluralPascalName = h.changeCase.pascal(name)
 %>import { Router } from 'express'
@@ -26,7 +27,7 @@ const router = Router()
 
 /**
  * @swagger
- * /api/<%= pluralCamelName %>:
+ * /api/<%= pluralKebabName %>:
  *   get:
  *    tags:
  *     - <%= pluralPascalName %>
@@ -45,7 +46,7 @@ router.get('/', get<%= pluralPascalName %>)
 
 /**
  * @swagger
- * /api/<%= pluralCamelName %>/{id}:
+ * /api/<%= pluralKebabName %>/{id}:
  *   get:
  *    tags:
  *     - <%= pluralPascalName %>
@@ -68,7 +69,7 @@ router.get('/:id', get<%= singularPascalName %>)
 
 /**
  * @swagger
- * /api/<%= pluralCamelName %>:
+ * /api/<%= pluralKebabName %>:
  *   post:
  *    tags:
  *     - <%= pluralPascalName %>
@@ -90,7 +91,7 @@ router.post('/', validator.body(Create<%= singularPascalName %>Schema), create<%
 
 /**
  * @swagger
- * /api/<%= pluralCamelName %>/{id}:
+ * /api/<%= pluralKebabName %>/{id}:
  *   put:
  *    tags:
  *     - <%= pluralPascalName %>
@@ -123,7 +124,7 @@ router.put(
 
 /**
  * @swagger
- * /api/<%= pluralCamelName %>/{id}:
+ * /api/<%= pluralKebabName %>/{id}:
  *   patch:
  *    tags:
  *     - <%= pluralPascalName %>
@@ -156,7 +157,7 @@ router.patch(
 
 /**
  * @swagger
- * /api/<%= pluralCamelName %>/{id}:
+ * /api/<%= pluralKebabName %>/{id}:
  *   delete:
  *    tags:
  *     - <%= pluralPascalName %>

@@ -3,4 +3,6 @@ inject: true
 to: src/api/index.ts
 after: router.use
 ---
-router.use('/<%= name %>', <%= name %>)
+<%
+  pluralKebabName = h.changeCase.kebab(name)
+%>router.use('/<%= pluralKebabName %>', <%= name %>)
