@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4-beta.1](https://github.com/whereiswolf/texas/compare/v0.0.4-beta.0...v0.0.4-beta.1) (2020-03-11)
+
+
+### Bug Fixes
+
+* change release scripts ([7418d9d](https://github.com/whereiswolf/texas/commit/7418d9d9e073363cf3a9d66a2f3e6d9fd3a6a889))
+* templates ([d0a7f8e](https://github.com/whereiswolf/texas/commit/d0a7f8e29f378bbc143c2c262a084ea5c83661a3))
+
 ### [0.0.4-beta.0](https://github.com/whereiswolf/texas/compare/v0.0.3...v0.0.4-beta.0) (2020-03-11)
 
 
