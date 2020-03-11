@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4-beta.0](https://github.com/whereiswolf/texas/compare/v0.0.3...v0.0.4-beta.0) (2020-03-11)
+
+
+### Features
+
+* add hygen templates ([f36ebda](https://github.com/whereiswolf/texas/commit/f36ebdab137c0e9092b018dde779c0f5a78f040d))
+* add hygen templates ([684f0ba](https://github.com/whereiswolf/texas/commit/684f0baa7b19ddf183ebcea015562f4b48cb6e82))
+
 ### [0.0.3](https://github.com/whereiswolf/texas/compare/v0.0.3-beta.3...v0.0.3) (2020-03-10)
 
 
