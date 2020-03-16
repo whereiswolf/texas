@@ -1,7 +1,12 @@
 import swaggerJSDoc from 'swagger-jsdoc'
 import { SwaggerOptions } from 'swagger-ui-express'
 
+const apis = [
+  process.env.NODE_ENV === 'development' ? './src/**/*.ts' : './dist/**/*.js',
+]
+
 const config: SwaggerOptions = {
+  apis,
   swaggerDefinition: {
     openapi: '3.0.0',
     info: {
@@ -10,7 +15,6 @@ const config: SwaggerOptions = {
       description: process.env.npm_package_description,
     },
   },
-  apis: ['./src/**/*.ts'],
   basePath: '/',
   jsonEditor: true,
 }
