@@ -4,7 +4,7 @@ to: src/api/<%= name %>/schemas/index.ts
 <%
   singularName = h.inflection.singularize(name)
   singularPascalName = h.changeCase.pascal(singularName)
-%>import { object, string } from 'joi'
+%>import { object, string } from '@hapi/joi'
 
 /**
  * @swagger

@@ -36,8 +36,8 @@ The project aims at providing a basic express application that you can extend wi
 
 #### Installation
 Prerequisities:
-- [Node.js](https://nodejs.org/en/) version `1.21.0` or newer.
-- [Yarn](https://yarnpkg.com/) version `12.0.0` or newer.
+- [Node.js](https://nodejs.org/en/) version `12.0.0` or newer.
+- [Yarn](https://yarnpkg.com/) version `1.21.0` or newer.
 
 Before installing project dependencies, download and install [Yarn](https://yarnpkg.com/) and [Node.js](https://nodejs.org/en/). Next, clone the repository and install project dependencies using: 
 ```bash

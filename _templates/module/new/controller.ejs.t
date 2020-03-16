@@ -21,8 +21,8 @@ export const get<%= pluralPascalName %> = async (
     const <%= pluralCamelName %> = await find()
     const <%= pluralCamelName %>WithSmiles = mapSmiles(<%= pluralCamelName %>)
     return response.status(200).json(<%= pluralCamelName %>WithSmiles)
-  } catch (err) {
-    return next(err)
+  } catch (error) {
+    return next(error)
   }
 }
 
@@ -36,8 +36,8 @@ export const get<%= singularPascalName %> = async (
     const <%= singularCamelName %> = await findById(id)
     const <%= singularCamelName %>WithSmile = addSmile(<%= singularCamelName %>)
     return response.status(200).json(<%= singularCamelName %>WithSmile)
-  } catch (err) {
-    return next(err)
+  } catch (error) {
+    return next(error)
   }
 }
 
@@ -50,8 +50,8 @@ export const create<%= singularPascalName %> = async (
     const { body } = request
     const <%= singularCamelName %> = await create(body)
     return response.status(200).json(<%= singularCamelName %>)
-  } catch (err) {
-    return next(err)
+  } catch (error) {
+    return next(error)
   }
 }
 
@@ -67,8 +67,8 @@ export const update<%= singularPascalName %> = async (
     } = request
     const <%= singularCamelName %> = await update(id, body)
     return response.status(200).json(<%= singularCamelName %>)
-  } catch (err) {
-    return next(err)
+  } catch (error) {
+    return next(error)
   }
 }
 
@@ -81,7 +81,7 @@ export const delete<%= singularPascalName %> = async (
     const { id } = request.params
     await remove(id)
     return response.status(204).json()
-  } catch (err) {
-    return next(err)
+  } catch (error) {
+    return next(error)
   }
 }

@@ -1,7 +1,7 @@
 import { Request } from 'express'
 import { Response } from 'jest-express/lib/response'
 import validator from './validator'
-import { object, string, bool, number } from 'joi'
+import { object, string, bool, number } from '@hapi/joi'
 import { mocked } from 'ts-jest/utils'
 
 describe('schemaValidator middleware', () => {
@@ -62,6 +62,46 @@ describe('schemaValidator middleware', () => {
     })
   })
 
+  it('passes the request to the next handler if params schema is correct', async () => {
+    const request = {
+      params: {
+        id: 'id-123',
+        userId: 'user-123',
+      },
+    } as Request<{ id: string; userId: string }>
+
+    const schema = object({
+      id: string().required(),
+      userId: string().required(),
+    })
+
+    const validate = validator.body(schema)
+    validate(request, response, next)
+
+    expect(next).toBeCalled()
+  })
+
+  it('responds with errors if params are incorrect', async () => {
+    const request = {
+      params: {
+        id: 'id-123',
+      },
+    } as Request<{ id: string }>
+
+    const schema = object({
+      id: string().required(),
+      userId: string().required(),
+    })
+
+    const validate = validator.params(schema)
+    validate(request, response, next)
+
+    expect(response.status).toBeCalledWith(400)
+    expect(response.json).toBeCalledWith({
+      error: ['"userId" is required'],
+    })
+  })
+
   it('passes the request to the next handler if request has id', async () => {
     const request = {
       params: { id: 'id-123' },
@@ -77,7 +117,6 @@ describe('schemaValidator middleware', () => {
     } as Request<any>
 
     validator.id(request, response, next)
-
     expect(response.status).toBeCalledWith(400)
     expect(response.json).toBeCalledWith({
       error: ['"id" is required'],

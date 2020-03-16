@@ -9,7 +9,7 @@ to: src/api/<%= name %>/routes/index.ts
   pluralCamelName = h.changeCase.camel(name)
   pluralPascalName = h.changeCase.pascal(name)
 %>import { Router } from 'express'
-import { validator } from 'middlewares'
+import { validator, methodNotAllowed } from 'middlewares'
 import {
   Create<%= singularPascalName %>Schema,
   Update<%= singularPascalName %>Schema,
@@ -177,5 +177,7 @@ router.patch(
  *              type: boolean
  */
 router.delete('/:id', validator.id, delete<%= singularPascalName %>)
+
+router.use(methodNotAllowed)
 
 export default router
