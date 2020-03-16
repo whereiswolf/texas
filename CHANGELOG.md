@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/whereiswolf/texas/compare/v0.0.6...v0.0.7) (2020-03-16)
+
+
+### Bug Fixes
+
+* dockerfile path and swagger creation ([229bc41](https://github.com/whereiswolf/texas/commit/229bc41d638439fdf832c14fbd748ad54e6d3f8e))
+* dockerfile path and swagger creation ([ee5a6d0](https://github.com/whereiswolf/texas/commit/ee5a6d0f57489cef5753a8908d0ebc91f6d84f4f))
+
 ### [0.0.6](https://github.com/whereiswolf/texas/compare/v0.0.5...v0.0.6) (2020-03-16)
 
 
