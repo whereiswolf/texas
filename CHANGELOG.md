@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/whereiswolf/texas/compare/v0.0.4...v0.0.5) (2020-03-16)
+
+
+### Features
+
+* add method not allowed middleware, refactor tests ([e24c224](https://github.com/whereiswolf/texas/commit/e24c224aac0e532764539c1bcc4251dfaa9fd4fb))
+* add validator, update modules, refactor ([324084d](https://github.com/whereiswolf/texas/commit/324084dbf67582d73a77428536fd70f509013da5))
+* update modules and refactor ([4748890](https://github.com/whereiswolf/texas/commit/4748890aff554b72c10790dd1ac3cd35258d5c72))
+
 ### [0.0.4](https://github.com/whereiswolf/texas/compare/v0.0.4-beta.1...v0.0.4) (2020-03-11)
 
 
