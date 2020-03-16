@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/whereiswolf/texas/compare/v0.0.5...v0.0.6) (2020-03-16)
+
+
+### Bug Fixes
+
+* vulnerability ([dc74857](https://github.com/whereiswolf/texas/commit/dc748571f375bf8a4f332ef8b05876d240f7f6c1))
+
 ### [0.0.5](https://github.com/whereiswolf/texas/compare/v0.0.4...v0.0.5) (2020-03-16)
 
 

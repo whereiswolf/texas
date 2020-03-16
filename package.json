@@ -1,7 +1,7 @@
 {
   "name": "texas",
   "description": "TypeScript, Express App Scaffolding",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/server.js",
   "author": "Michał Wilk <wilk.michal@outlook.com>",
   "repository": {
