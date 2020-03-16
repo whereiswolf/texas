@@ -1,4 +1,4 @@
-import { object, string } from 'joi'
+import { object, string } from '@hapi/joi'
 
 /**
  * @swagger

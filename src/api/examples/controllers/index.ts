@@ -12,8 +12,8 @@ export const getExamples = async (
     const examples = await find()
     const examplesWithSmiles = mapSmiles(examples)
     return response.status(200).json(examplesWithSmiles)
-  } catch (err) {
-    return next(err)
+  } catch (error) {
+    return next(error)
   }
 }
 
@@ -27,8 +27,8 @@ export const getExample = async (
     const example = await findById(id)
     const exampleWithSmile = addSmile(example)
     return response.status(200).json(exampleWithSmile)
-  } catch (err) {
-    return next(err)
+  } catch (error) {
+    return next(error)
   }
 }
 
@@ -41,8 +41,8 @@ export const createExample = async (
     const { body } = request
     const example = await create(body)
     return response.status(200).json(example)
-  } catch (err) {
-    return next(err)
+  } catch (error) {
+    return next(error)
   }
 }
 
@@ -58,8 +58,8 @@ export const updateExample = async (
     } = request
     const example = await update(id, body)
     return response.status(200).json(example)
-  } catch (err) {
-    return next(err)
+  } catch (error) {
+    return next(error)
   }
 }
 
@@ -72,7 +72,7 @@ export const deleteExample = async (
     const { id } = request.params
     await remove(id)
     return response.status(204).json()
-  } catch (err) {
-    return next(err)
+  } catch (error) {
+    return next(error)
   }
 }

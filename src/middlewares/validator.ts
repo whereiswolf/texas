@@ -1,20 +1,24 @@
 import { Request, Response, NextFunction } from 'express'
-import { validate, object, string, Schema } from 'joi'
+import { object, string, Schema } from '@hapi/joi'
 
 type ValidationLocation = 'body' | 'params'
 
-const IdSchema = object({
+const IdSchema = object<{ id: string }>({
   id: string().required(),
 })
 
 export const createValidator = (location: ValidationLocation) => (
   schema: Schema
 ) => (req: Request, res: Response, next: NextFunction) => {
-  const { error } = validate(req[location], schema, { abortEarly: false })
-  if (!error) return next()
+  try {
+    const { error } = schema.validate(req[location], { abortEarly: false })
+    if (!error) return next()
 
-  const message = error.details.map(details => details.message)
-  return res.status(400).json({ error: message })
+    const message = error.details.map(details => details.message)
+    return res.status(400).json({ error: message })
+  } catch (error) {
+    next(error)
+  }
 }
 
 export default {

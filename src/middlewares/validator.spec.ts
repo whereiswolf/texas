@@ -1,7 +1,7 @@
 import { Request } from 'express'
 import { Response } from 'jest-express/lib/response'
 import validator from './validator'
-import { object, string, bool, number } from 'joi'
+import { object, string, bool, number } from '@hapi/joi'
 import { mocked } from 'ts-jest/utils'
 
 describe('schemaValidator middleware', () => {
