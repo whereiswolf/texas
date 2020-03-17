@@ -87,11 +87,12 @@ The default project structure is as follows:
 |- package.json
 |- ...
 ```
-To create new modules in the app in accordance with a defined folder structure, you can use [Hygen's](https://www.hygen.io/) templates located in `_templates/` directory. In order to do so, run the following command:
+To create new modules/middlewares in the app based on a defined folder structure, you can use [Hygen's](https://www.hygen.io/) templates located in `_templates/` directory. In order to do so, run the following command:
 ```bash
 $ yarn new:module moduleName # use plural name, e.g. "products"
+$ yarn new:middleware middlewareName
 ```
-The script will create a new module, add necessary imports and exports, as well as some examplary functions and tests.
+The script will create a new module (or middleware), add necessary imports and exports, as well as some examplary functions and tests.
 
 Remember that you don't have to follow the provided folder structure, but you can adjust it to your liking.
 

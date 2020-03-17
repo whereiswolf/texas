@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { validator, methodNotAllowed } from 'middlewares'
+import { validator, noMethodHandler } from 'middlewares'
 import {
   CreateExampleSchema,
   UpdateExampleSchema,
@@ -168,6 +168,6 @@ router.patch(
  */
 router.delete('/:id', validator.id, deleteExample)
 
-router.use(methodNotAllowed)
+router.use(noMethodHandler)
 
 export default router

@@ -23,7 +23,8 @@
     "clean:git": "rimraf .git",
     "release": "standard-version",
     "release:beta": "standard-version --prerelease beta",
-    "new:module": "hygen module new"
+    "new:module": "hygen module new",
+    "new:middleware": "hygen middleware new"
   },
   "husky": {
     "hooks": {
