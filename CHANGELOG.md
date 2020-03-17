@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/whereiswolf/texas/compare/v0.0.7...v0.0.8) (2020-03-17)
+
+
+### Features
+
+* add middleware creation script, refactor ([a0c309d](https://github.com/whereiswolf/texas/commit/a0c309d776eb85fc7f3d0252920197505c9380e7))
+* add middleware creation script, refactor ([d00e0cc](https://github.com/whereiswolf/texas/commit/d00e0ccfb5413f4040552e2fd7c5c761478b3442))
+
 ### [0.0.7](https://github.com/whereiswolf/texas/compare/v0.0.6...v0.0.7) (2020-03-16)
 
 
