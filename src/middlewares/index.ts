@@ -1,2 +1,2 @@
 export { default as validator } from './validator'
-export { default as methodNotAllowed } from './methodNotAllowed'
+export { default as noMethodHandler } from './noMethodHandler'
