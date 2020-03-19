@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/whereiswolf/texas/compare/v0.0.9...v0.0.10) (2020-03-19)
+
+
+### Features
+
+* add integration tests ([3d6e02e](https://github.com/whereiswolf/texas/commit/3d6e02eb69bbe9410cac7798ff34b84a32a8f995))
+* add integration tests ([a5ce8a4](https://github.com/whereiswolf/texas/commit/a5ce8a43e8af3f617aad9c5621ffa92eb4f59d08))
+
 ### [0.0.9](https://github.com/whereiswolf/texas/compare/v0.0.8...v0.0.9) (2020-03-19)
 
 
