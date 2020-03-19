@@ -1,17 +1,10 @@
 import express from 'express'
-import config from 'config'
 import loaders from './loaders'
 
-export default (async () => {
+export const createServer = async () => {
   const app = express()
-
   await loaders.init(app)
+  return app
+}
 
-  return app.listen(config.PORT, config.HOST, error =>
-    error
-      ? console.log(error)
-      : console.log(
-          `Server (${config.NODE_ENV}) started at http://${config.HOST}:${config.PORT}`
-        )
-  )
-})()
+export default createServer
