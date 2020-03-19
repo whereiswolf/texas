@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/whereiswolf/texas/compare/v0.0.8...v0.0.9) (2020-03-19)
+
+
+### Features
+
+* split server loading, refactor ([4f3d370](https://github.com/whereiswolf/texas/commit/4f3d3708ff60d29e27c766ecbe079dffccb499e1))
+* split server loading, refactor ([2fc4038](https://github.com/whereiswolf/texas/commit/2fc403878b45b941d8e31d6e228d0ef4f6f294bf))
+
 ### [0.0.8](https://github.com/whereiswolf/texas/compare/v0.0.7...v0.0.8) (2020-03-17)
 
 
