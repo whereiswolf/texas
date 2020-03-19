@@ -1,5 +1,5 @@
 ---
-to: src/api/<%= name %>/schemas/index.ts
+to: src/api/<%= name %>/validation/index.ts
 ---
 <%
   singularName = h.inflection.singularize(name)

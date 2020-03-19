@@ -4,7 +4,7 @@ import {
   CreateExampleSchema,
   UpdateExampleSchema,
   PatchExampleSchema,
-} from '../schemas'
+} from '../validation'
 import {
   getExamples,
   createExample,

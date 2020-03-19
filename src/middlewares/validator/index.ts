@@ -9,13 +9,13 @@ const IdSchema = object<{ id: string }>({
 
 export const createValidator = (location: ValidationLocation) => (
   schema: Schema
-) => (req: Request, res: Response, next: NextFunction) => {
+) => (request: Request, response: Response, next: NextFunction) => {
   try {
-    const { error } = schema.validate(req[location], { abortEarly: false })
+    const { error } = schema.validate(request[location], { abortEarly: false })
     if (!error) return next()
 
     const message = error.details.map(details => details.message)
-    return res.status(400).json({ error: message })
+    return response.status(400).json({ error: message })
   } catch (error) {
     next(error)
   }
