@@ -14,7 +14,7 @@ import {
   Create<%= singularPascalName %>Schema,
   Update<%= singularPascalName %>Schema,
   Patch<%= singularPascalName %>Schema,
-} from '../schemas'
+} from '../validation'
 import {
   get<%= pluralPascalName %>,
   create<%= singularPascalName %>,
