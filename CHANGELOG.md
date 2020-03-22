@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/whereiswolf/texas/compare/v0.0.10...v0.0.11) (2020-03-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency swagger-jsdoc to v3.7.0 ([cac1e3d](https://github.com/whereiswolf/texas/commit/cac1e3dffaf56b8064bd3d354a8a7059d6fb5a4c))
+* **deps:** update dependency swagger-jsdoc to v3.7.0 ([520cf6f](https://github.com/whereiswolf/texas/commit/520cf6fd6b554b203a45208a36a7654bee46b99b))
+* **deps:** update dependency swagger-jsdoc to v4 ([18fb4dd](https://github.com/whereiswolf/texas/commit/18fb4dd1ac17eccca0c17ab5de87656cd2263b4b))
+* **deps:** update dependency swagger-jsdoc to v4 ([1900d1a](https://github.com/whereiswolf/texas/commit/1900d1a8c66f22c2498a2899a993f3e07f4ea166))
+
 ### [0.0.10](https://github.com/whereiswolf/texas/compare/v0.0.9...v0.0.10) (2020-03-19)
 
 
