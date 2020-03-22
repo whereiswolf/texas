@@ -47,7 +47,7 @@
     "express-status-monitor": "1.2.9",
     "helmet": "3.21.3",
     "morgan": "1.10.0",
-    "swagger-jsdoc": "3.6.0",
+    "swagger-jsdoc": "3.7.0",
     "swagger-ui-express": "4.1.4"
   },
   "devDependencies": {
