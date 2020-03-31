@@ -72,7 +72,7 @@
     "hygen": "5.0.3",
     "jest": "25.1.0",
     "jest-express": "1.11.3",
-    "lint-staged": "10.0.9",
+    "lint-staged": "10.1.1",
     "mock-express-response": "0.2.2",
     "nodemon": "2.0.2",
     "prettier": "2.0.2",
