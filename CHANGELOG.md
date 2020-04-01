@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/whereiswolf/texas/compare/v0.0.11...v0.0.12) (2020-04-01)
+
+
+### Features
+
+* add nginx and pm2, refactor ([00421c9](https://github.com/whereiswolf/texas/commit/00421c9f08bf54ba76f852ee5fb17d03ce27baf6))
+* add nginx and pm2, refactor ([c574faf](https://github.com/whereiswolf/texas/commit/c574faf1f5f2fa76751b3ed971fd491f576ab259))
+
+
+### Bug Fixes
+
+* **deps:** update dependencies ([d3c3076](https://github.com/whereiswolf/texas/commit/d3c3076a8933e1445d6a52dde6f3eaa2f08f7796))
+
 ### [0.0.11](https://github.com/whereiswolf/texas/compare/v0.0.10...v0.0.11) (2020-03-22)
 
 
