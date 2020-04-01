@@ -114,16 +114,24 @@ $ yarn start:local
 The script will build the app using `yarn build`, then run the transpiled app with `node dist/server.js`. Use it for running the built app locally, without hot reloading.
 
 **Docker**
-To build the app's image(s) and run container(s) use:
+To build the app's image(s) and run container(s) you can use:
 ```bash
 $ yarn docker
+$ yarn docker:prod
 ```
-It will build a Docker image(s) and run the container(s) with `docker-compose`. Docker files ale located in `.docker/` directory.
+Both scripts will build Docker image(s) and run the container(s) with `docker-compose`. However `docker:prod` also creates an [Nginx](https://www.nginx.com/) container with config located `./nginx.conf` and runs containers in a detached mode. Docker files ale located in `.docker/` directory. 
 
 ## Testing 🧪
-The project uses [Jest](https://jestjs.io/) as a test runner, and [jest-express](https://github.com/jameswlane/jest-express) to mock Express. To run tests use:
+#### Unit tests
+The project uses [Jest](https://jestjs.io/) as a test runner, and [jest-express](https://github.com/jameswlane/jest-express) to mock Express. To run unit tests use:
 ```bash
 $ yarn test
+```
+
+#### Integration tests
+Texas allows you to create integration tests with the help of [SuperTest](https://github.com/visionmedia/supertest). The test files are located in the `test/` directory of the project. To run them, use the script:
+```bash
+$ yarn test:integration
 ```
 
 ## Releasing 🏷️

@@ -9,4 +9,4 @@ COPY tsconfig.json ./
 RUN yarn build
 
 EXPOSE $PORT
-CMD ["yarn", "start"]
+CMD ["yarn", "serve"]

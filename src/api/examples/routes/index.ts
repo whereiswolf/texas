@@ -17,7 +17,7 @@ const router = Router()
 
 /**
  * @swagger
- * /api/examples:
+ * /examples:
  *   get:
  *    tags:
  *     - Examples
@@ -36,7 +36,7 @@ router.get('/', getExamples)
 
 /**
  * @swagger
- * /api/examples/{id}:
+ * /examples/{id}:
  *   get:
  *    tags:
  *     - Examples
@@ -59,7 +59,7 @@ router.get('/:id', getExample)
 
 /**
  * @swagger
- * /api/examples:
+ * /examples:
  *   post:
  *    tags:
  *     - Examples
@@ -81,7 +81,7 @@ router.post('/', validator.body(CreateExampleSchema), createExample)
 
 /**
  * @swagger
- * /api/examples/{id}:
+ * /examples/{id}:
  *   put:
  *    tags:
  *     - Examples
@@ -114,7 +114,7 @@ router.put(
 
 /**
  * @swagger
- * /api/examples/{id}:
+ * /examples/{id}:
  *   patch:
  *    tags:
  *     - Examples
@@ -147,7 +147,7 @@ router.patch(
 
 /**
  * @swagger
- * /api/examples/{id}:
+ * /examples/{id}:
  *   delete:
  *    tags:
  *     - Examples
