@@ -77,7 +77,7 @@
     "lint-staged": "10.1.1",
     "mock-express-response": "0.2.2",
     "nodemon": "2.0.2",
-    "prettier": "2.0.2",
+    "prettier": "2.0.4",
     "rimraf": "3.0.2",
     "standard-version": "7.1.0",
     "supertest": "4.0.2",
