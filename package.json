@@ -72,7 +72,7 @@
     "eslint-plugin-prettier": "3.1.2",
     "husky": "4.2.3",
     "hygen": "5.0.3",
-    "jest": "25.2.7",
+    "jest": "25.3.0",
     "jest-express": "1.11.3",
     "lint-staged": "10.1.1",
     "mock-express-response": "0.2.2",
