@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/whereiswolf/texas/compare/v0.0.12...v1.0.0) (2020-04-24)
+
+
+### Features
+
+* add typedi and routing-controllers ([29a7f2d](https://github.com/whereiswolf/texas/commit/29a7f2dec100afade9dd0744dca3a113828c9162))
+* add typedi and routing-controllers ([e5b7caf](https://github.com/whereiswolf/texas/commit/e5b7caf40cbb158552d4fcf3aad0a4ccc0082e78))
+* update renovatebot config ([1875152](https://github.com/whereiswolf/texas/commit/1875152b2833ddff6e507221bd46874caaf8f5bf))
+
+
+### Bug Fixes
+
+* readme ([5557478](https://github.com/whereiswolf/texas/commit/55574789bdcf1188ebbcca9217ae1a1c23ba2638))
+* **deps:** update dependency pm2 to v4.4.0 ([c043bb3](https://github.com/whereiswolf/texas/commit/c043bb31e9858c2e7c182bd0e8c33471bb95247c))
+* **deps:** update dependency pm2 to v4.4.0 ([2beccce](https://github.com/whereiswolf/texas/commit/2becccee5fe9f32be675923b72b259eb13a58942))
+* renovatebot config ([6568c57](https://github.com/whereiswolf/texas/commit/6568c579f76348835e509c1f870a3f6cdd0b1e25))
+* **deps:** update dependency express-status-monitor to v1.2.11 ([24cf5a1](https://github.com/whereiswolf/texas/commit/24cf5a199e342f873cf24e65eea74a6fed3780a3))
+* **deps:** update dependency express-status-monitor to v1.2.11 ([2c0474c](https://github.com/whereiswolf/texas/commit/2c0474c4177e54c56023979e660968fe2b89cde8))
+
 ### [0.0.12](https://github.com/whereiswolf/texas/compare/v0.0.11...v0.0.12) (2020-04-01)
 
 
