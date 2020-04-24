@@ -1,8 +1,6 @@
-import { Router } from 'express'
-import examples from './examples'
+import cowboys from './cowboys'
 
-const router = Router()
-
-router.use('/examples', examples)
-
-export default router
+export default [
+  // Controllers
+  cowboys,
+]
