@@ -1,18 +1,21 @@
 ---
-to: src/middlewares/<%= name %>/index.spec.ts
+to: src/shared/middlewares/<%= name %>.middleware.spec.ts
 ---
-import { Request } from 'express'
+<%
+  camelName = h.changeCase.camel(name)
+  pascalName = h.changeCase.pascal(name)
+%>import { Request } from 'express'
 import { Response } from 'jest-express/lib/response'
-import <%= name %> from '.'
+import <%= pascalName %>Middleware from './<%= name %>.middleware'
 
-describe('<%= name %> middleware', () => {
+describe('<%= pascalName %> middleware', () => {
   it('passes the request to the next handler', async () => {
     const response: any = new Response()
     const request = {} as Request
     const next = jest.fn()
 
-    <%= name %>(request, response, next)
-    expect(response.status).toBeCalledWith(405)
-    expect(response.json).toBeCalled()
+    const middleware = new <%= pascalName %>Middleware()
+    middleware.use(request, response, next)
+    expect(next).toBeCalled()
   })
 })
