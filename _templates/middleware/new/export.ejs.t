@@ -1,6 +1,8 @@
 ---
 inject: true
-to: src/middlewares/index.ts
+to: src/shared/middlewares/index.ts
 prepend: true
 ---
-export { default as <%= name %> } from './<%= name %>'
+<%
+  pascalName = h.changeCase.pascal(name)
+%>export { default as <%= pascalName %>Middleware } from './<%= name %>.middleware'

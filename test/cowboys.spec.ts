@@ -1,20 +1,11 @@
----
-to: test/<%= name %>.spec.ts
----
-<%
-  singularName = h.inflection.singularize(name)
-  singularCamelName = h.changeCase.camel(singularName)
-  singularPascalName = h.changeCase.pascal(singularName)
-  pluralCamelName = h.changeCase.camel(name)
-  pluralPascalName = h.changeCase.pascal(name)
-%>import request, { SuperTest, Test } from 'supertest'
+import request, { SuperTest, Test } from 'supertest'
 import { Container } from 'typedi'
 import createServer from '../src/server'
-import { <%= pluralPascalName %>Repository } from '../src/api/<%= name %>/repositories'
+import { CowboysRepository } from '../src/api/cowboys/repositories'
 
 const BASE_PATH = '/api'
 
-describe('<%= pluralPascalName %> API module ', () => {
+describe('Cowboys API module ', () => {
   let agent: SuperTest<Test>
 
   beforeAll(async () => {
@@ -22,8 +13,8 @@ describe('<%= pluralPascalName %> API module ', () => {
     agent = request.agent(app)
 
     Container.set(
-      <%= pluralPascalName %>Repository,
-      new <%= pluralPascalName %>Repository([
+      CowboysRepository,
+      new CowboysRepository([
         {
           id: 'veryrandomid1234',
           name: 'Test McTesterson',
@@ -40,9 +31,9 @@ describe('<%= pluralPascalName %> API module ', () => {
     )
   })
 
-  describe('GET /<%= pluralCamelName %>', () => {
+  describe('GET /cowboys', () => {
     it('responds with a list', async () => {
-      await agent.get(`${BASE_PATH}/<%= pluralCamelName %>`).expect(200, [
+      await agent.get(`${BASE_PATH}/cowboys`).expect(200, [
         {
           id: 'veryrandomid1234',
           name: 'Test McTesterson',
@@ -59,10 +50,10 @@ describe('<%= pluralPascalName %> API module ', () => {
     })
   })
 
-  describe('POST /<%= pluralCamelName %>', () => {
+  describe('POST /cowboys', () => {
     it('creates a new object and sends it response', async () => {
       const { body: createdObject } = await agent
-        .post(`${BASE_PATH}/<%= pluralCamelName %>`)
+        .post(`${BASE_PATH}/cowboys`)
         .send({
           name: 'John Test',
           birthDate: '2020-02-01T09:00:00.000Z',
@@ -77,14 +68,14 @@ describe('<%= pluralPascalName %> API module ', () => {
         })
 
       await agent
-        .get(`${BASE_PATH}/<%= pluralCamelName %>`)
+        .get(`${BASE_PATH}/cowboys`)
         .expect(({ body }) => expect(body).toContainEqual(createdObject))
     })
   })
 
-  describe('GET /<%= pluralCamelName %>/:id', () => {
+  describe('GET /cowboys/:id', () => {
     it('responds with a correct object', async () => {
-      await agent.get(`${BASE_PATH}/<%= pluralCamelName %>/veryrandomid1234`).expect(200, {
+      await agent.get(`${BASE_PATH}/cowboys/veryrandomid1234`).expect(200, {
         id: 'veryrandomid1234',
         name: 'Test McTesterson',
         birthDate: '2020-02-01T09:00:00.000Z',
@@ -93,10 +84,10 @@ describe('<%= pluralPascalName %> API module ', () => {
     })
   })
 
-  describe('PUT /<%= pluralCamelName %>/:id', () => {
+  describe('PUT /cowboys/:id', () => {
     it('responds with an updated object', async () => {
       await agent
-        .put(`${BASE_PATH}/<%= pluralCamelName %>/veryrandomid1234`)
+        .put(`${BASE_PATH}/cowboys/veryrandomid1234`)
         .send({
           name: 'John Test',
           birthDate: '1990-06-05T23:00:00.000Z',
@@ -111,10 +102,10 @@ describe('<%= pluralPascalName %> API module ', () => {
     })
   })
 
-  describe('PATCH /<%= pluralCamelName %>/:id', () => {
+  describe('PATCH /cowboys/:id', () => {
     it('responds with an updated object', async () => {
       await agent
-        .patch(`${BASE_PATH}/<%= pluralCamelName %>/veryrandomid1234`)
+        .patch(`${BASE_PATH}/cowboys/veryrandomid1234`)
         .send({
           name: 'Billy the Test',
         })
@@ -127,10 +118,10 @@ describe('<%= pluralPascalName %> API module ', () => {
     })
   })
 
-  describe('DELETE /<%= pluralCamelName %>/:id', () => {
+  describe('DELETE /cowboys/:id', () => {
     it('deletes an object', async () => {
-      await agent.delete(`${BASE_PATH}/<%= pluralCamelName %>/veryrandomid0987`).expect(204)
-      await agent.get(`${BASE_PATH}/<%= pluralCamelName %>`).expect(({ body }) => {
+      await agent.delete(`${BASE_PATH}/cowboys/veryrandomid0987`).expect(204)
+      await agent.get(`${BASE_PATH}/cowboys`).expect(({ body }) => {
         expect(body.length).toBe(2)
         expect(body).not.toContainEqual({
           id: 'veryrandomid0987',

@@ -1,8 +1,17 @@
 ---
-to: src/middlewares/<%= name %>/index.ts
+to: src/shared/middlewares/<%= name %>.middleware.ts
 ---
-import { Request, Response, Next } from 'express'
+<%
+  pascalName = h.changeCase.pascal(name)
+%>import { Request, Response, NextFunction } from 'express'
+import { ExpressMiddlewareInterface } from 'routing-controllers'
 
-const <%= name %> = (_: Request, res: Response, nex: Next) => next()
+export class <%= pascalName %>Middleware implements ExpressMiddlewareInterface {
+  use(request: Request, response: Response, next: NextFunction) {
+    console.log('Pow! Pow!')
+    next()
+  }
+}
 
-export default <%= name %>
+export default <%= pascalName %>Middleware
+

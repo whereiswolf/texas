@@ -1,5 +1,5 @@
 ---
-to: src/api/<%= name %>/controllers/index.ts
+to: src/api/<%= name %>/<%= name %>.controller.ts
 ---
 <%
   singularName = h.inflection.singularize(name)
@@ -7,81 +7,71 @@ to: src/api/<%= name %>/controllers/index.ts
   singularPascalName = h.changeCase.pascal(singularName)
   pluralCamelName = h.changeCase.camel(name)
   pluralPascalName = h.changeCase.pascal(name)
-%>import { Request, Response, NextFunction } from 'express'
-import { find, create, findById, update, remove } from '../repository'
-import { addSmile, mapSmiles } from '../services'
-import { <%= singularPascalName %> } from 'models'
+%>import {
+  JsonController,
+  Get,
+  Param,
+  Post,
+  Body,
+  Put,
+  Patch,
+  Delete,
+  OnUndefined,
+} from 'routing-controllers'
+import { ResponseSchema } from 'routing-controllers-openapi'
+import {
+  <%= singularPascalName %>Dto,
+  Create<%= singularPascalName %>Dto,
+  Update<%= singularPascalName %>Dto,
+  Patch<%= singularPascalName %>Dto,
+} from './<%= name %>.dtos'
+import { <%= pluralPascalName %>Service } from './services'
 
-export const get<%= pluralPascalName %> = async (
-  _: Request,
-  response: Response<<%= singularPascalName %>[]>,
-  next: NextFunction
-) => {
-  try {
-    const <%= pluralCamelName %> = await find()
-    const <%= pluralCamelName %>WithSmiles = mapSmiles(<%= pluralCamelName %>)
-    return response.status(200).json(<%= pluralCamelName %>WithSmiles)
-  } catch (error) {
-    return next(error)
+@JsonController('/<%= pluralCamelName %>')
+class <%= pluralPascalName %>Controller {
+  constructor(private readonly <%= pluralCamelName %>Service: <%= pluralPascalName %>Service) {}
+
+  @Get()
+  @ResponseSchema(<%= singularPascalName %>Dto, { isArray: true })
+  async get<%= pluralPascalName %>() {
+    return this.<%= pluralCamelName %>Service.getAll<%= pluralPascalName %>()
+  }
+
+  @Post()
+  @ResponseSchema(<%= singularPascalName %>Dto)
+  async create<%= singularPascalName %>(@Body({ validate: true }) body: Create<%= singularPascalName %>Dto) {
+    return this.<%= pluralCamelName %>Service.create<%= singularPascalName %>(body)
+  }
+
+  @Get('/:id')
+  @ResponseSchema(<%= singularPascalName %>Dto)
+  async get<%= singularPascalName %>(@Param('id') id: string) {
+    return this.<%= pluralCamelName %>Service.get<%= singularPascalName %>ById(id)
+  }
+
+  @Put('/:id')
+  @ResponseSchema(<%= singularPascalName %>Dto)
+  async update<%= singularPascalName %>(
+    @Param('id') id: string,
+    @Body({ validate: true }) body: Update<%= singularPascalName %>Dto
+  ) {
+    return this.<%= pluralCamelName %>Service.update<%= singularPascalName %>(id, body)
+  }
+
+  @Patch('/:id')
+  @ResponseSchema(<%= singularPascalName %>Dto)
+  async patch<%= singularPascalName %>(
+    @Param('id') id: string,
+    @Body({ validate: true }) body: Patch<%= singularPascalName %>Dto
+  ) {
+    return this.<%= pluralCamelName %>Service.patch<%= singularPascalName %>(id, body)
+  }
+
+  @Delete('/:id')
+  @OnUndefined(204)
+  async delete<%= singularPascalName %>(@Param('id') id: string) {
+    this.<%= pluralCamelName %>Service.delete<%= singularPascalName %>(id)
   }
 }
 
-export const get<%= singularPascalName %> = async (
-  request: Request<{ id: string }>,
-  response: Response<<%= singularPascalName %>>,
-  next: NextFunction
-) => {
-  try {
-    const { id } = request.params
-    const <%= singularCamelName %> = await findById(id)
-    const <%= singularCamelName %>WithSmile = addSmile(<%= singularCamelName %>)
-    return response.status(200).json(<%= singularCamelName %>WithSmile)
-  } catch (error) {
-    return next(error)
-  }
-}
-
-export const create<%= singularPascalName %> = async (
-  request: Request,
-  response: Response<<%= singularPascalName %>>,
-  next: NextFunction
-) => {
-  try {
-    const { body } = request
-    const <%= singularCamelName %> = await create(body)
-    return response.status(200).json(<%= singularCamelName %>)
-  } catch (error) {
-    return next(error)
-  }
-}
-
-export const update<%= singularPascalName %> = async (
-  request: Request<{ id: string }>,
-  response: Response<<%= singularPascalName %>>,
-  next: NextFunction
-) => {
-  try {
-    const {
-      params: { id },
-      body,
-    } = request
-    const <%= singularCamelName %> = await update(id, body)
-    return response.status(200).json(<%= singularCamelName %>)
-  } catch (error) {
-    return next(error)
-  }
-}
-
-export const delete<%= singularPascalName %> = async (
-  request: Request<{ id: string }>,
-  response: Response,
-  next: NextFunction
-) => {
-  try {
-    const { id } = request.params
-    await remove(id)
-    return response.status(204).json()
-  } catch (error) {
-    return next(error)
-  }
-}
+export default <%= pluralPascalName %>Controller
