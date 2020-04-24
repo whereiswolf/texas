@@ -50,7 +50,7 @@
     "helmet": "3.22.0",
     "morgan": "1.10.0",
     "pm2": "4.4.0",
-    "routing-controllers": "0.8.1-alpha.2",
+    "routing-controllers": "0.8.1",
     "routing-controllers-openapi": "1.8.1",
     "swagger-jsdoc": "4.0.0",
     "swagger-ui-express": "4.1.4"
