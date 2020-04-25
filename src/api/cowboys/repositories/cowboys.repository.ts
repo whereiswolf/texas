@@ -2,33 +2,31 @@ import { Service } from 'typedi'
 import crypto from 'crypto'
 import { Cowboy } from '../models'
 
-const cowboysMock: Cowboy[] = [
+const cowboys: Cowboy[] = [
   {
     id: crypto.randomBytes(8).toString('hex'),
     name: 'Billy Kid',
-    birthDate: new Date(1859, 9, 17),
-    deathDate: new Date(1881, 7, 14),
+    birthDate: new Date(1859, 9, 17).toISOString(),
+    deathDate: new Date(1881, 7, 14).toISOString(),
   },
   {
     id: crypto.randomBytes(8).toString('hex'),
     name: 'John Wesley Hardin',
-    birthDate: new Date(1853, 5, 26),
-    deathDate: new Date(1895, 8, 19),
+    birthDate: new Date(1853, 5, 26).toISOString(),
+    deathDate: new Date(1895, 8, 19).toISOString(),
   },
   {
     id: crypto.randomBytes(8).toString('hex'),
     name: 'Tom Ketchum',
-    birthDate: new Date(1863, 10, 31),
-    deathDate: new Date(1901, 4, 26),
+    birthDate: new Date(1863, 10, 31).toISOString(),
+    deathDate: new Date(1901, 4, 26).toISOString(),
   },
 ]
 
 @Service()
 class CowboysRepository {
-  constructor(private cowboys: Cowboy[] = cowboysMock) {}
-
   find() {
-    return this.cowboys
+    return cowboys
   }
 
   create(cowboyData: Omit<Cowboy, 'id'>) {
@@ -36,24 +34,24 @@ class CowboysRepository {
       ...cowboyData,
       id: crypto.randomBytes(8).toString('hex'),
     }
-    this.cowboys.push(cowboy)
+    cowboys.push(cowboy)
     return cowboy
   }
 
   findById(id: string) {
-    return this.cowboys.find((cowboy) => cowboy.id === id)
+    return cowboys.find((cowboy) => cowboy.id === id)
   }
 
   update(id: string, cowboyData: Partial<Cowboy>) {
-    const cowboyIndex = this.cowboys.findIndex((cowboy) => cowboy.id === id)
-    const cowboy: Cowboy = { ...this.cowboys[cowboyIndex], ...cowboyData }
-    this.cowboys[cowboyIndex] = cowboy
+    const cowboyIndex = cowboys.findIndex((cowboy) => cowboy.id === id)
+    const cowboy: Cowboy = { ...cowboys[cowboyIndex], ...cowboyData }
+    cowboys[cowboyIndex] = cowboy
     return cowboy
   }
 
   delete(id: string) {
-    const cowboyIndex = this.cowboys.findIndex((cowboy) => cowboy.id === id)
-    this.cowboys.splice(cowboyIndex, 1)
+    const cowboyIndex = cowboys.findIndex((cowboy) => cowboy.id === id)
+    cowboys.splice(cowboyIndex, 1)
     return true
   }
 }
