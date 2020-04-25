@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/whereiswolf/texas/compare/v1.0.0...v1.0.1) (2020-04-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency routing-controllers to v0.8.1 ([eb1fbff](https://github.com/whereiswolf/texas/commit/eb1fbff0e8dc0a8203d332e2e6fad91237122c18))
+* **deps:** update dependency routing-controllers to v0.8.1 ([b2a1088](https://github.com/whereiswolf/texas/commit/b2a1088c8121607739f0c07d5fccd167bf0d1c97))
+
 ## [1.0.0](https://github.com/whereiswolf/texas/compare/v0.0.12...v1.0.0) (2020-04-24)
 
 
