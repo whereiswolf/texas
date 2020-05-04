@@ -3,15 +3,10 @@ import config from 'config'
 import swaggerUi from 'swagger-ui-express'
 import { getMetadataArgsStorage } from 'routing-controllers'
 import { routingControllersToSpec } from 'routing-controllers-openapi'
-import { getFromContainer, MetadataStorage } from 'class-validator'
 import { validationMetadatasToSchemas } from 'class-validator-jsonschema'
 import api from 'api'
 
-const { validationMetadatas } = getFromContainer(MetadataStorage) as any
-const schemas = validationMetadatasToSchemas(validationMetadatas, {
-  refPointerPrefix: '#/components/schemas/',
-})
-
+const schemas = validationMetadatasToSchemas()
 const storage = getMetadataArgsStorage()
 const docs = routingControllersToSpec(
   storage,
