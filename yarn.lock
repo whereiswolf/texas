@@ -6162,10 +6162,10 @@ rimraf@3.0.2, rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-routing-controllers-openapi@1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/routing-controllers-openapi/-/routing-controllers-openapi-1.8.1.tgz#e6ae603cb4516d2cf84d0fbf1fa67884dbafdc43"
-  integrity sha512-n127TrP/EWmO8AZrXdjQ6xYH3Cx/e6xPmiHfgEez8TPPnsLEKFJQoCK3EGUKkoIUfN4MOx/bNe4g1AP/AGfTVw==
+routing-controllers-openapi@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/routing-controllers-openapi/-/routing-controllers-openapi-2.0.0.tgz#f2005466de78d7ca263549e6f6fb96c950c086a6"
+  integrity sha512-mIVYWAsxrvyATwcDMn+SUWRKPa5fFG2Vtmv/kDk5hbp4tGvs9IJyZ/VovV9PsE98PfdNy92Fvo1UBxS3IJbu3Q==
   dependencies:
     lodash "^4.17.15"
     openapi3-ts "^1.3.0"
