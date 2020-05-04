@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/whereiswolf/texas/compare/v1.0.2...v1.1.0) (2020-05-04)
+
+
+### Features
+
+* update dependencies and fix template ([62916dd](https://github.com/whereiswolf/texas/commit/62916dd958b27640cdf107c5a54e1eb07514d23b))
+
+
+### Bug Fixes
+
+* docs loader ([ff15f7b](https://github.com/whereiswolf/texas/commit/ff15f7bf8cf76cf47ec073c2b62c7e930b69c9e7))
+* template and resolutions ([2a3a6f9](https://github.com/whereiswolf/texas/commit/2a3a6f9981338afde0701f1dc6cc5bcaf2660f8b))
+* **deps:** update class-validator-jsonschema ([8246a6f](https://github.com/whereiswolf/texas/commit/8246a6f97876f3c5eb555fdc061f6d954c997459))
+* **deps:** update dependency class-validator to v0.12.2 ([0b314f2](https://github.com/whereiswolf/texas/commit/0b314f21c4b550438d0a2963eda5e64b79f4bd99))
+* **deps:** update dependency class-validator to v0.12.2 ([b4d939e](https://github.com/whereiswolf/texas/commit/b4d939e6bf0537f6eb0a403470cf45b35921e589))
+* **deps:** update dependency class-validator to v0.12.2 ([4eaff8a](https://github.com/whereiswolf/texas/commit/4eaff8a8ee51ce434f424c9c5e751c098dcf33ff))
+* **deps:** update dependency routing-controllers-openapi to v2 ([205bddd](https://github.com/whereiswolf/texas/commit/205bddd9346b46b4291fc8c9199ab4aab4f08b8b))
+
 ### [1.0.2](https://github.com/whereiswolf/texas/compare/v1.0.1...v1.0.2) (2020-04-25)
 
 
