@@ -59,7 +59,7 @@
     "@types/cors": "2.8.6",
     "@types/express": "4.17.6",
     "@types/express-status-monitor": "1.2.0",
-    "@types/helmet": "0.0.46",
+    "@types/helmet": "0.0.47",
     "@types/jest": "25.2.1",
     "@types/morgan": "1.9.0",
     "@types/node": "13.13.5",
