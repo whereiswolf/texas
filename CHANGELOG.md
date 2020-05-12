@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/whereiswolf/texas/compare/v1.1.0...v1.2.0) (2020-05-12)
+
+
+### Features
+
+* update dependencies ([56b85d9](https://github.com/whereiswolf/texas/commit/56b85d98becaed87e07b5e103df2f77d6aa47b36))
+
+
+### Bug Fixes
+
+* **deps:** update dependency class-validator-jsonschema to v2.0.1 ([2ea48ba](https://github.com/whereiswolf/texas/commit/2ea48bac81d5fdf543067d84338f47f15a2f91ce))
+* **deps:** update dependency class-validator-jsonschema to v2.0.1 ([5a4796e](https://github.com/whereiswolf/texas/commit/5a4796e83f542543333bf71254cc5ed0922952e8))
+
 ## [1.1.0](https://github.com/whereiswolf/texas/compare/v1.0.2...v1.1.0) (2020-05-04)
 
 
