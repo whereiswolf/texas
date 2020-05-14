@@ -692,10 +692,10 @@
     "@types/node" "*"
     "@types/range-parser" "*"
 
-"@types/express-status-monitor@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@types/express-status-monitor/-/express-status-monitor-1.2.0.tgz#c25a4374c610d231f3faab6557184a3515b46c0c"
-  integrity sha512-DTrk79+845WiC2pHA/d7nz3//aTYmzt0pr30ZuEfIM1CIXJl6M7uwXTS6LVb60uuu11k/KGWBL6z2CDAwNIKWQ==
+"@types/express-status-monitor@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@types/express-status-monitor/-/express-status-monitor-1.2.1.tgz#328d8252c4fae95d75a4909455bf4f26a8e71752"
+  integrity sha512-R0OIX1PqRNHP65v5aFT+vbcbj1wMKQcodUf0Z9oJPrtmqCnanErsjK4ena1RZCUjHzNSkwD25I0SbGLwTvtqdQ==
   dependencies:
     "@types/express" "*"
     "@types/socket.io" "*"
