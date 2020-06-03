@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/whereiswolf/texas/compare/v1.2.0...v1.3.0) (2020-06-03)
+
+
+### Features
+
+* update dependencies ([308ee1b](https://github.com/whereiswolf/texas/commit/308ee1b2a141a9111ee7438ffa25d4b311096e18))
+
+
+### Bug Fixes
+
+* add missing dependency ([f93f652](https://github.com/whereiswolf/texas/commit/f93f65237dc342c2c3a3081ced1ab97866a865fa))
+* **deps:** update dependency class-validator-jsonschema to v2.0.2 ([2e01597](https://github.com/whereiswolf/texas/commit/2e015976ded87f16c4ee7866365c590d4562e9d9))
+* **deps:** update dependency class-validator-jsonschema to v2.0.2 ([ea2a0d3](https://github.com/whereiswolf/texas/commit/ea2a0d39c9e7286a25b46cefbbed29794b7f4648))
+* **deps:** update dependency express-status-monitor to v1.3.3 ([d384797](https://github.com/whereiswolf/texas/commit/d384797c1fe25c46fad0ae28c47736abb31dcf0d))
+* **deps:** update dependency express-status-monitor to v1.3.3 ([c66a83a](https://github.com/whereiswolf/texas/commit/c66a83a9f733eb5d0e9f16f3775c6427f3b9ea1a))
+
 ## [1.2.0](https://github.com/whereiswolf/texas/compare/v1.1.0...v1.2.0) (2020-05-12)
 
 
