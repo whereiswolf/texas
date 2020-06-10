@@ -926,19 +926,19 @@
     semver "^7.3.2"
     tsutils "^3.17.1"
 
-"@zerollup/ts-helpers@^1.7.16":
-  version "1.7.16"
-  resolved "https://registry.yarnpkg.com/@zerollup/ts-helpers/-/ts-helpers-1.7.16.tgz#4b9b4bd14b3496917c17ca73c06a5b00ed05b7d1"
-  integrity sha512-vQ9n0XEcgcwuooyQRufow7DqC7d6ihWgpAeeEMADactHBfzL7Xj7iCRd18kVsRerwEy8rRaiJNN7GKADAVQ8Xw==
+"@zerollup/ts-helpers@^1.7.18":
+  version "1.7.18"
+  resolved "https://registry.yarnpkg.com/@zerollup/ts-helpers/-/ts-helpers-1.7.18.tgz#747177f6d5abc06c3a0f5dffe7362d365cf0391d"
+  integrity sha512-S9zN+y+i5yN/evfWquzSO3lubqPXIsPQf6p9OiPMpRxDx/0totPLF39XoRw48Dav5dSvbIE8D2eAPpXXJxvKwg==
   dependencies:
     resolve "^1.12.0"
 
-"@zerollup/ts-transform-paths@1.7.17":
-  version "1.7.17"
-  resolved "https://registry.yarnpkg.com/@zerollup/ts-transform-paths/-/ts-transform-paths-1.7.17.tgz#b9bfab9ad6a7c2e09f40930345f18c9435cda51f"
-  integrity sha512-sdf8v1s6/QllFjsidj1qcbHWjWexrQHMcX3fPByKlUAz4IPYK+tb/lag7peplDvyTi1GlwjKXWOQfBDZNhiyRg==
+"@zerollup/ts-transform-paths@1.7.18":
+  version "1.7.18"
+  resolved "https://registry.yarnpkg.com/@zerollup/ts-transform-paths/-/ts-transform-paths-1.7.18.tgz#72f705c66690879e51d53c73dc76c4e2518a8c50"
+  integrity sha512-YPVUxvWQVzRx1OBN0Pmkd58+R9FcfUJuwTaPUSoi5rKxuXMtxevTXdfi0w5mEaIH8b0DfL+wg0wFDHiJE+S2zA==
   dependencies:
-    "@zerollup/ts-helpers" "^1.7.16"
+    "@zerollup/ts-helpers" "^1.7.18"
 
 JSONStream@^1.0.4:
   version "1.3.5"
