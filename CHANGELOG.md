@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/whereiswolf/texas/compare/v1.3.0...v1.3.1) (2020-06-11)
+
+
+### Bug Fixes
+
+* prettier script ([cbebdc8](https://github.com/whereiswolf/texas/commit/cbebdc8babac0878d57647c1c93c30e1b61e32d4))
+* **deps:** update dependency helmet to v3.22.1 ([c2f9cd1](https://github.com/whereiswolf/texas/commit/c2f9cd1f1db6c4fe13194aa77675ace6e4ab9c3f))
+* **deps:** update dependency helmet to v3.22.1 ([5d7cd84](https://github.com/whereiswolf/texas/commit/5d7cd84b3f05eb85e94afa2dfe10c362ba526ac9))
+
 ## [1.3.0](https://github.com/whereiswolf/texas/compare/v1.2.0...v1.3.0) (2020-06-03)
 
 
