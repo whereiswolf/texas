@@ -9,7 +9,7 @@
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceRoot}",
-      "args": ["${workspaceRoot}/src/server.ts"],
+      "args": ["${workspaceRoot}/src/index.ts"],
       "runtimeArgs": ["-r", "ts-node/register"],
       "console": "integratedTerminal",
       "env": {
@@ -22,7 +22,7 @@
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/dist/server.js",
+      "program": "${workspaceFolder}/dist/index.js",
       "preLaunchTask": "build",
       "console": "integratedTerminal",
       "env": {

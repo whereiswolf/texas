@@ -76,7 +76,7 @@ The default project structure is as follows:
 │   ├── index.ts            # Server entry file
 │   ├── server.ts
 │   ├── api
-│   │   ├── cowboys         # API modules
+│   │   ├── cowboys/        # API modules
 │   │   └── index.ts
 │   ├── config              # Environment variables, etc.
 │   │   └── index.ts
