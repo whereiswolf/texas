@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/whereiswolf/texas/compare/v1.3.1...v1.3.2) (2020-06-12)
+
+
+### Bug Fixes
+
+* debug scripts, remove pm2 ([48f9914](https://github.com/whereiswolf/texas/commit/48f9914da62d1f21ac0d8c8680253f8cf6c6a9af))
+* debug tasks, remove pm2, update docker-compose ([d1177a3](https://github.com/whereiswolf/texas/commit/d1177a380b7daca543dd9b59371012271d32fabb))
+
 ### [1.3.1](https://github.com/whereiswolf/texas/compare/v1.3.0...v1.3.1) (2020-06-11)
 
 
