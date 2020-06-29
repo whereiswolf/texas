@@ -62,7 +62,7 @@
     "@types/jest": "26.0.0",
     "@types/morgan": "1.9.1",
     "@types/node": "13.13.12",
-    "@types/supertest": "2.0.9",
+    "@types/supertest": "2.0.10",
     "@types/swagger-jsdoc": "3.0.2",
     "@types/swagger-ui-express": "4.1.2",
     "@typescript-eslint/eslint-plugin": "3.2.0",
